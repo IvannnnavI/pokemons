@@ -72,8 +72,8 @@ abstract class Pokemon {
     }
 
     public void sleep(Pokemon pokemon) {
-        this.HP+=100;
-        System.out.println(this.name + "восстанавливает здоровье");
+        this.HP *=1.1;
+        System.out.println(this.name + "восстанавливает здоровье" + pokemon.getHP());
     }
 }
 
