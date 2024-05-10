@@ -14,6 +14,10 @@ public class Main {
                 new Scyther(),
                 new Whimsicott()
         };
+
+
+
+
         List<Pokemon> pokemonList =  Arrays.asList(pokemons);
         Collections.shuffle(pokemonList);
         // battle.addLeftTeam(pokemonList.get(0))
@@ -24,7 +28,11 @@ public class Main {
         // battle.addRightTeam(pokemonList.get(5))
         battle.go1vs1(cottonee, scizor);
 
+
+
     }
+
+
 
 
 
