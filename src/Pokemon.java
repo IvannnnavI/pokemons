@@ -1,4 +1,7 @@
-public class Pokemon {
+
+
+
+abstract class Pokemon {
 
     private double HP;
     private double attack;
