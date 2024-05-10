@@ -17,13 +17,14 @@ public class Pokemon {
         this.name = name;
     }
 
-    public Pokemon(double HP, double attack, double defense, String specialAttack , String name) {
+    public Pokemon(double HP, double attack, double defense, String specialAttack, String name) {
         this.HP = HP;
         this.attack = attack;
         this.defense = defense;
         this.specialAttack = specialAttack;
         this.name = name;
     }
+
     public double getHP() {
         return HP;
     }
@@ -55,4 +56,12 @@ public class Pokemon {
     public void setSpecialAttack(String specialAttack) {
         this.specialAttack = specialAttack;
     }
+
+    public void sleep(Pokemon pokemon) {
+        this.HP+=100;
+        System.out.println(this.name + "восстанавливает здоровье");
+    }
+
 }
+
+
