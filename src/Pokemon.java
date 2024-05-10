@@ -1,4 +1,7 @@
-public class Pokemon {
+
+
+
+abstract class Pokemon {
 
     private double HP;
     private double attack;
@@ -17,13 +20,14 @@ public class Pokemon {
         this.name = name;
     }
 
-    public Pokemon(double HP, double attack, double defense, String specialAttack , String name) {
+    public Pokemon(double HP, double attack, double defense, String specialAttack, String name) {
         this.HP = HP;
         this.attack = attack;
         this.defense = defense;
         this.specialAttack = specialAttack;
         this.name = name;
     }
+
     public double getHP() {
         return HP;
     }
@@ -56,6 +60,7 @@ public class Pokemon {
         this.specialAttack = specialAttack;
     }
 
+
     public void fight(Pokemon opponent) {
         System.out.println(this.name + " нанес " + (this.attack - opponent.defense) + " урон");
         opponent.HP -= this.attack - opponent.defense;
@@ -65,4 +70,11 @@ public class Pokemon {
             System.out.println("Покемон " + opponent.name + " победил");
         }
     }
+
+    public void sleep(Pokemon pokemon) {
+        this.HP+=100;
+        System.out.println(this.name + "восстанавливает здоровье");
+    }
 }
+
+
