@@ -62,18 +62,20 @@ abstract class Pokemon {
 
 
     public void fight(Pokemon opponent) {
+        double damage  = this.attack - opponent.defense;
         System.out.println(this.name + " нанес " + (this.attack - opponent.defense) + " урон");
-        opponent.HP -= this.attack - opponent.defense;
-        if (this.HP > opponent.HP) {
-            System.out.println("Покемон " + this.name + " победил");
-        } else {
-            System.out.println("Покемон " + opponent.name + " победил");
-        }
+        opponent.HP -= damage;
     }
 
     public void sleep(Pokemon pokemon) {
-        this.HP *=1.1;
-        System.out.println(this.name + "восстанавливает здоровье" + pokemon.getHP());
+        double heal = this.HP * 1.1;
+
+        if (heal>=100){
+            this.HP = 100;
+        }
+        else {
+        this.HP = heal;
+        System.out.println(this.name + " восстанавливает здоровье " + pokemon.getHP());}
     }
 }
 

@@ -1,6 +1,6 @@
 public class Scizor extends Pokemon {
     public Scizor () {
-        super(100, 13.6, 20, "Blizzard","Scizor");
+        super(100, 13.6, 6, "Blizzard","Scizor");
     }
 
 

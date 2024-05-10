@@ -26,16 +26,18 @@ public class Battle {
 
         while (left.getHP() > 0 && right.getHP() > 0) {
             left.fight(right);
-            System.out.println("Теперь у покемона" + right + right.getHP());
+            System.out.println("Теперь у покемона" + right.getName() + " " + right.getHP());
             left.sleep(left);
             right.fight(left);
             right.sleep(right);
-            if (left.getHP() < 0) {
-                System.out.println("Победил покемон" + right.getName());
 
-            } else {
-                System.out.println("ПОбедил покемон" + left.getName());
-            }
+        }
+
+        if (left.getHP() < 0) {
+            System.out.println("Победил покемон" + right.getName());
+
+        } else {
+            System.out.println("ПОбедил покемон" + left.getName());
         }
 
     }
