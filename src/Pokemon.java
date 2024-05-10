@@ -55,4 +55,14 @@ public class Pokemon {
     public void setSpecialAttack(String specialAttack) {
         this.specialAttack = specialAttack;
     }
+
+    public void fight(Pokemon opponent) {
+        System.out.println(this.name + " нанес " + (this.attack - opponent.defense) + " урон");
+        opponent.HP -= this.attack - opponent.defense;
+        if (this.HP > opponent.HP) {
+            System.out.println("Покемон " + this.name + " победил");
+        } else {
+            System.out.println("Покемон " + opponent.name + " победил");
+        }
+    }
 }
